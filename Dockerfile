@@ -1,7 +1,6 @@
-FROM nginx:stable-alpine
+FROM nginx:1.17.1-alpine
 
 ADD conf/nginx.conf /etc/nginx/nginx.conf
-#ADD conf/service.conf /etc/nginx/conf.d/service.conf
 
 ADD script/entrypoint.sh /entrypoint.sh
 ADD script/le.sh /le.sh
