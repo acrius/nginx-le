@@ -1,5 +1,7 @@
 FROM nginx:1.17.1-alpine
 
+RUN apk add nginx-mod-http-cache-purge
+
 ADD conf/nginx.conf /etc/nginx/nginx.conf
 
 ADD script/entrypoint.sh /entrypoint.sh
